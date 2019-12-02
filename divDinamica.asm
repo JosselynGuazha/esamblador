@@ -13,7 +13,7 @@
 	int 80h
 %endmacro
 
-section .data
+section .data 
 
 	mensaje db "El resultado es: ",10
 	len equ $ - mensaje
@@ -27,9 +27,9 @@ section .data
 	msj3 db "Resultado es: ",10
 	len3 equ $ - msj3
 
-	
+
 section .bss
-	
+
 	n1 resb 1
 	n2 resb 1
 	division resb 1
@@ -42,12 +42,12 @@ _start:
 
 ;*******ingrese primer numero**********
 
-	escribir msj1, len1 
+	escribir msj1, len1
 	lectura n1, 2
 
 ;*******ingrese segundo numero**********
 
-	escribir msj2, len2 
+	escribir msj2, len2
 	lectura n2, 2
 
 ;*******proceso**********
@@ -57,15 +57,15 @@ _start:
 	sub al,'0'
 	sub bl,'0'
 	div bl
-	add al,'0'	
+	add al,'0'
 	mov [division], al
 	add ah,'0'
 	mov [residuo], ah
 
 ;*******imprimir Suma**********
 
-	escribir mensaje, len 	
-	escribir division, 1 
+	escribir mensaje, len
+	escribir division, 1
 	escribir msj3,len3
 	escribir residuo,1
 
