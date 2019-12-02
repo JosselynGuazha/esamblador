@@ -1,0 +1,5 @@
+resb---> directiva de datos... establece un espacio en memoria con inicializacion
+asignar en variables con corchetes
+transformar de numero a cadena se suma '0' add eax,'0'
+transformar de cadena a numero se resta '0' sub eax,'0'
+variables a variable no hay como
