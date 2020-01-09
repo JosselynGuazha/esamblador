@@ -3,3 +3,30 @@ asignar en variables con corchetes
 transformar de numero a cadena se suma '0' add eax,'0'
 transformar de cadena a numero se resta '0' sub eax,'0'
 variables a variable no hay como
+
+-Salto no condicional
+jmp --> instruccion que salta hacia una etiqueta que es un posicion en memoria
+
+-Salto Condicional (jnnn)
+Jz JP JA 
+
+-LOOP--> para establecer ciclos
+
+-call--> para las subrutinas las llama y llamados a etiquetas
+
+#Saltos
+
+Je-->de igualdad--se activa la bandera de (ZR)
+cmp--> instruccion de comparacion  es el que altera la bandera
+
+jz--> resultado es cero
+jmp--> si Restriccion
+jg-->operando 1 > operando 2
+js-->signal = 0 pl (positivo)
+            = 1 ng (Negativo)
+
+            CF      ZF
+cmp(5,4)    0       0
+cmp(4,5)    1       0
+cmp(5,5)    0       1
+
