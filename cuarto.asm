@@ -22,8 +22,7 @@ _start:
         mov edx,len_as
         int 80H
 
-	mov 
-[msj+15],dword '****'
+	mov [msj+15],dword '****'
 
 	mov eax,4
         mov ebx,1

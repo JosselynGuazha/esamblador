@@ -28,7 +28,6 @@ section .data
 	msjResiduo db 10,"El residuo es : "
 	lenResiduo equ $ -msjResiduo
 
-
 section .bss
 	n1 resb 1
 	n2 resb 1
@@ -49,48 +48,25 @@ _start:
 	sub bl,'0'
     mov cx, 0
 
-
 resta:
-;*********proceso**********
-    sub al, bl
+    sub al,bl
     inc cx
     jmp comparar
 
 comparar:
     cmp al,bl
     jg resta
-    je resta 
-
+    je resta
 mensaje:
     add al,'0'
     add cx,'0'
-	mov [cociente], cx
-    mov [residuo], al
-;********cociente**********
-	escribir msjCociente,lenCociente
-	escribir cociente,1
-;********residuo**********
-	escribir msjResiduo,lenResiduo
-	escribir residuo,1
-
+    mov [cociente],cx
+    mov [residuo],al
+    escribir msjCociente,lenCociente
+    escribir cociente,1
+    escribir msjResiduo,lenResiduo
+    escribir residuo,1
 salir:
     mov eax,1
-	int 80h
+    int 80h
 
-		mov cl, 0
-	escribir msj1,len1
-    lectura n1,3
-	
-inicio:
-    mov al,[n1]
-    mov bl, 9
-	sub al,'0'
-    cmp al,bl
-    jg mensaje
-    jmp primo
-    je primo
-
-mensaje:
-	escribir msj1,len1
-    lectura n1,3
-	jmp inicio

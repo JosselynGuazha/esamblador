@@ -79,6 +79,7 @@ sumar:
     jmp multi
 
 
+
 restar:
 ;*************RESTA***********
 ;*******proceso **********

@@ -33,6 +33,7 @@ section .bss
 section .text
 	global _start
 _start:
+	mov cl, 1
 
 ;********Primer Valor*********
 	escribir mensaje1, lenUno 
@@ -48,7 +49,7 @@ _start:
 	mov bl,[n2]
 	sub al,'0'
 	sub bl,'0'
-	div bl
+	div cl
 	add al,'0'
 	mov [cociente],al
 	add ah,'0'

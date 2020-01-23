@@ -36,17 +36,14 @@ section .text
 _start:
 
 ;*******ingrese primer numero**********
-
 	escribir msj1, len1 
 	lectura n1, 2
 
 ;*******ingrese segundo numero**********
-
 	escribir msj2, len2 
 	lectura n2, 2
 
 ;*******proceso**********
-
 	mov al,[n1]
 	mov bl,[n2]
 	sub al,'0'
@@ -56,9 +53,7 @@ _start:
 	mov [multiplicacion], al
 	add ah,'0'
 	
-
 ;*******imprimir Suma**********
-
 	escribir mensaje, len 	
 	escribir multiplicacion, 1 
 

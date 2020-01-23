@@ -24,6 +24,8 @@ section .data
     len1 equ $ - msj1
     msj2 db "Número Menor"
     len2 equ $ - msj2
+    msj3 db "Número igual"
+    len3 equ $ - msj3
 
 section .bss
 	n1 resb 1
@@ -34,7 +36,7 @@ section .text
 _start:
     escribir msj01,len01
     lectura n1,2
-    escribir msj02,len0
+    escribir msj02,len02
     lectura n2,2
 ;*********proceso**********
     mov al,[n1]
@@ -42,7 +44,7 @@ _start:
     cmp al,bl
     jg mayor
     jmp menor
-    ;je para el igual
+    je igual
 
 mayor:
     escribir msj1,len1
@@ -51,7 +53,46 @@ mayor:
 menor:
     escribir msj2,len2
     int 80h
+    jmp salir
+igual:
+    escribir msj3,len3
+    int 80h
 
 salir:
     mov eax,1
 	int 80h
+
+
+    mayor:
+    escribir msj1,len1
+    lectura n1,3
+    mov al,[n1]
+    mov bl, 9
+	sub al,'0'
+    cmp al,bl
+    jg inicio
+    jmp salir
+    je inicio
+
+
+
+
+division:
+;*********proceso**********
+	inc cl
+	mov al,[n1]
+	mov bl,cl
+	sub al,'0'
+	div cl
+	add al,'0'
+	mov [cociente],al
+	add ah,'0'
+	mov [residuo],ah
+
+comparar:
+	sub residuo,'0'
+    cmp residuo,0
+    jg division
+    je division 
+
+    	

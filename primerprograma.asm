@@ -1,4 +1,4 @@
-section .data
+ section .data
         mensaje db "Hola",10
         tamano equ $-mensaje
         mensaje2 db "Josselyn",10
@@ -17,16 +17,19 @@ _start:
         mov ecx,mensaje
         mov edx,tamano
         int 80H
+
         mov eax,4
         mov ebx,1
         mov ecx,mensaje2
         mov edx,tamano2
         int 80H
+
         mov eax,4
         mov ebx,1
         mov ecx,mensaje3
         mov edx,tamano3
         int 80H
+        
         mov eax,4
         mov ebx,1
         mov ecx,mensaje4

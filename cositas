@@ -30,3 +30,10 @@ cmp(5,4)    0       0
 cmp(4,5)    1       0
 cmp(5,5)    0       1
 
+programacion normal esamblador 
+
+porque no utilizar la misma interrupcion para diferentes SO 
+por el tipo de organizacion por las diferencias en la interaccion de las instruscciones 
+
+
+realizar lo del path ahora en vez de 39 que vaya 8

@@ -49,9 +49,6 @@ section .bss
     cuadrado resb 1
     circulo resb 1
     rectangulo resb 1
-    
-
-	
 
 section .text
 	global _start

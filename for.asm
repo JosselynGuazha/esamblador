@@ -2,6 +2,7 @@ section .data
     msj db 10,'Item: '
     len equ $ -msj
 
+
 section .bss
 	n1 resb 2
 
@@ -11,7 +12,6 @@ _start:
     mov cx,10
 
 ciclo:
-    
     cmp cx,0
     jz salir
     dec cx

@@ -115,7 +115,7 @@ restar:
 	sub ax,'0'
 	sub bx,'0'
 	sub ax,bx
-	add ax,'0'	
+			
 	mov [resta], ax
 ;*******imprimir resta**********
 	escribir mensajeResta, lenResta	
